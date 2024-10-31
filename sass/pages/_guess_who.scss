@@ -1,0 +1,68 @@
+@use "../abstracts/colours" as c;
+
+#code-con div {
+    justify-self: center;
+}
+
+#code-text {
+    margin-bottom: 5px;
+}
+
+#guess-who-area {
+    margin-top: 20px;
+}
+
+#character-con, #board-con {
+    display: flex;
+    flex-direction: column;
+    p {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+.board-piece {
+    background-color: white;
+    width: 20%;
+    height: 125px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+}
+
+#gw-board {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+#gw-generate {
+    width: 100px;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+.gw-image {
+    margin-top: 5px;
+    max-height: 80px!important;
+    margin-bottom: 5px;
+}
+
+.gw-name {
+    color: black;
+    margin-bottom: 5px!important;
+}
+
+.gw-key {
+    display: none;
+}
+
+#gw-game-select {
+    margin-bottom: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+}

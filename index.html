@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Emblem Guess Who</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <section id="code-con" class="grid-con">
+        <div class="col-span-full">
+            <p id="code-text">Input Applicable Code Here:</p>
+            <div id="code-box">
+                <input id="gw-input" type="number" required>
+                <button id="gw-submit">Submit</button>
+            </div>
+        </div>
+      </section>
+    
+      <section id="guess-who-area" class="grid-con">
+        <div id="character-con" class="col-span-1 m-col-span-4">
+            <p>Your Character:</p>
+            <select id="gw-character-name">
+                <option value="">Please Select A Character</option>
+            </select>
+            <img id="select-image" src="">
+        </div>
+    
+        <div id="board-con" class="col-span-3 m-col-span-8">
+            <p>Your Board:</p>
+    
+            <select id="gw-game-select">
+                <option value="">Please Select A Game</option>
+                <option value="all">All Games</option>
+                <option value="1">Shadow Dragon and New Mystery</option>
+                <option value="2">Shadows of Valentia</option>
+                <option value="3">Geneology of the Holy War</option>
+                <option value="4">Thracia 776</option>
+                <option value="6">The Binding Blade</option>
+                <option value="5">The Blazing Blade</option>
+                <option value="7">The Sacred Stones</option>
+                <option value="8">Path of Radiance and Radiant Dawn</option>
+                <option value="10">Awakening</option>
+                <option value="11">Fates</option>
+                <option value="12">Three Houses and Three Hopes</option>
+                <option value="13">Engage</option>
+                <option value="15">Heroes</option>
+                <option value="anna">Hard Mode</option>
+            </select>
+            <button id="gw-generate">Generate</button>
+    
+            <div id="gw-token"></div>
+            <div id="gw-board">
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+                <div class="board-piece" style="opacity: 1"></div>
+            </div>
+        </div>
+      </section>
+</body>
+</html>

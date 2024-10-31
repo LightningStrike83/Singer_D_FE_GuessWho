@@ -23,6 +23,11 @@ class CharacterController extends Controller {
         $characters = Character::select('id', 'name', 'game')->where('game', '=', $game)->orderBy('name', 'asc')->get();
         return response()->json($characters);
     }
+
+    public function getAnnas(){
+        $characters = Character::select('id', 'name', 'game')->where('name', '=', 'Anna')->orderBy('game', 'asc')->get();
+        return response()->json($characters);
+    }
 }
 
 

@@ -17,7 +17,8 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get("/characters", "CharacterController@getAll");
+$router->get("/characters/all", "CharacterController@getAll");
 $router->get("/characters/{game}", "CharacterController@getOne");
+$router->get("/characters/anna", "CharacterController@getAnnas");
 $router->post("/guess-who/add", "GuessWhoGameController@save");
 $router->get("/guess-who/{id}", "GuessWhoGameController@getOne");

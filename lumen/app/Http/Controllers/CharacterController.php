@@ -19,13 +19,13 @@ class CharacterController extends Controller {
         return response()->json($characters);
     }
 
-     public function getOne($game){
-        $characters = Character::select('id', 'name', 'game')->where('game', '=', $game)->orderBy('name', 'asc')->get();
+    public function getAnna() {
+        $characters = Character::select('id', 'name', 'game')->where('name', '=', 'Anna')->orderBy('game', 'asc')->get();
         return response()->json($characters);
     }
 
-    public function getAnnas(){
-        $characters = Character::select('id', 'name', 'game')->where('name', '=', 'Anna')->orderBy('game', 'asc')->get();
+     public function getOne($game){
+        $characters = Character::select('id', 'name', 'game')->where('game', '=', $game)->orderBy('name', 'asc')->get();
         return response()->json($characters);
     }
 }

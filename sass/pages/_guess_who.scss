@@ -1,6 +1,7 @@
 @use "../abstracts/colours" as c;
 
 #code-con div {
+    margin-top: 10px;
     justify-self: center;
 }
 
@@ -23,7 +24,6 @@
 .board-piece {
     background-color: white;
     width: 20%;
-    height: 125px;
     border: 3px solid blue;
     display: flex;
     justify-content: flex-end;
@@ -56,6 +56,7 @@
     background-color: rgb(83, 83, 255);
     width: 100%;
     padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .gw-key {
@@ -71,5 +72,42 @@
 #select-image {
     margin-top: 20px;
     align-self: center;
-    max-width: 75%;
+    max-width: 50%;
+}
+
+#gw-token {
+    margin-bottom: 10px;
+}
+
+#mobile-divider {
+    border-bottom: 5px solid white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#gw-character-name {
+    width: 75%;
+    align-self: center;
+}
+
+select {
+    margin-top: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    #mobile-divider {
+        display: none;
+    }
+
+    #select-image {
+        max-width: 75%;
+    }
+
+    #gw-character-name {
+        max-width: 100%;
+    }
+
+    .gw-name {
+        padding-bottom: 2px;
+    }
 }

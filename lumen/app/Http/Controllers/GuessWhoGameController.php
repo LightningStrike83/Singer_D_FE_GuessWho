@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\GuessWhoGame;
 
+use App\Models\Character;
+
 
 class GuessWhoGameController extends Controller {
     /**
@@ -14,29 +16,31 @@ class GuessWhoGameController extends Controller {
      * @return void
      */
 
-     public function getOne($id){
-        $guesswho = GuessWhoGame::where('id', $id)->first();
-        
-        if (!$guesswho) {
-            return response()->json(['error' => 'GuessWhoGame not found'], 404);
-        }
-        
-        $characterData = [];
-        
-        for ($i = 1; $i <= 25; $i++) {
-            $characterNumber = $guesswho->{"character$i"};
-            $character = CharacterController::where('number', $characterNumber)->first();
-            
-            if ($character) {
-                $characterData[] = [
-                    'number' => $character->number,
-                    'name' => $character->name
-                ];
-            }
-        }
-        
-        return response()->json($characterData);
+public function getOne($id) {
+    $guesswho = GuessWhoGame::where('id', $id)->first();
+    
+    if (!$guesswho) {
+        return response()->json(['error' => 'GuessWhoGame not found'], 404);
     }
+    
+    $characterData = [];
+    
+    for ($i = 1; $i <= 25; $i++) {
+        $characterNumber = $guesswho->{"character$i"};
+        $character = Character::where('id', $characterNumber)->first(); // Querying the model directly
+        
+        if ($character) {
+            $characterData[] = [
+                'id' => $character->id,
+                'name' => $character->name
+            ];
+        }
+    }
+    
+    return response()->json($characterData);
+}
+
+    
     
 
     public function save(Request $request) {

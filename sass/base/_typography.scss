@@ -1,89 +1,19 @@
 @use "../abstracts/colours" as c;
 
-p, li:not(#usage_tips li, #pokedex_tips li) {
+p, li {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    font-size: 18px;
-    line-height: 25px;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-a:visited {
-    color: white;
-}
-
-a:hover {
-    color: blue;
-    opacity: 70%;
-    transition: ease-in-out all 0.5s;
-    text-decoration: underline;
-}
-
-li {
-    float: left;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-}
-
-li p {
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-li div {
-    display: flex;
-    flex-direction: row;
-}
-
-hr {
-    height: 1px;
-    width: 100%;
-    color: white;
-    margin-bottom: 30px;
-}
-
-h2 {
-    color: white;
-    background-color: red;
-}
-
-h3 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    color: white;
-}
-
-#main_title {
-    h3 {
-        font-size: 30px;
-        font-family: 'Silkscreen', Arial, Helvetica, sans-serif;
-    }
+    font-size: 12px;
 }
 
 @media screen and (min-width: 428px) {
     p, li {
-        font-size: 17px;
-    }
-
-    #about_title, #about_devs h3 {
-        font-size: 27px;
+        font-size: 14px;
     }
 }
 
 @media screen and (min-width: 768px) {
     p, li {
-        font-size: 18px;
-    }
-
-    #about_title, #about_devs h3 {
-        font-size: 30px;
+        font-size: 16px;
     }
 }

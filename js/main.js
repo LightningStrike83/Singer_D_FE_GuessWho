@@ -185,10 +185,17 @@ function loadGame(){
     .then(response => response.json())
     .then(function(response) {
         let n = Math.min(response.length, 25);
-        let usedCharacters = new Set();
         const gwBoard = document.querySelector("#gw-board");
+        const gameToken = document.querySelector("#gw-token")
+        const p = document.createElement("p")
 
         gwBoard.innerHTML = ""
+
+        gameToken.innerHTML = ""
+
+        p.textContent = `Your game id is ${gameNumber}`
+
+        gameToken.appendChild(p)
 
         for (let l = 0; l < n; l++) {
             const div = document.createElement("div");

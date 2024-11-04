@@ -24,7 +24,17 @@ class CharacterController extends Controller {
         return response()->json($characters);
     }
 
-     public function getOne($game){
+    public function getDevFavs(){
+        $characters = Character::select('id', 'name', 'game')->where('dev_fav', '=', 'y')->orderBy('game', 'asc')->get();
+        return response()->json($characters);
+    }
+
+    public function getBetaFavs(){
+        $characters = Character::select('id', 'name', 'game')->where('beta_test_fav', '=', 'y')->orderBy('game', 'asc')->get();
+        return response()->json($characters);
+    }
+
+    public function getOne($game){
         $characters = Character::select('id', 'name', 'game')->where('game', '=', $game)->orderBy('name', 'asc')->get();
         return response()->json($characters);
     }

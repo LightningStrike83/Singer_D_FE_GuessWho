@@ -19,6 +19,8 @@ $router->get('/', function () use ($router) {
 
 $router->get("/characters/all", "CharacterController@getAll");
 $router->get("/characters/anna", "CharacterController@getAnna");
+$router->get("/characters/dev-fav", "CharacterController@getDevFavs");
+$router->get("/characters/beta-fav", "CharacterController@getBetaFavs");
 $router->post("/guess-who/add", "GuessWhoGameController@save");
 $router->get("/characters/{game}", "CharacterController@getOne");
 $router->get("/guess-who/{id}", "GuessWhoGameController@getOne");

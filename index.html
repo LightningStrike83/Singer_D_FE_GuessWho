@@ -15,7 +15,7 @@
         <div class="col-span-full">
             <p id="code-text">Input Applicable Code Here:</p>
             <div id="code-box">
-                <input id="gw-input" type="number" required>
+                <input min="1" id="gw-input" type="number" required>
                 <button id="gw-submit">Submit</button>
             </div>
         </div>
@@ -25,7 +25,7 @@
         <div id="character-con" class="col-span-full m-col-span-4">
             <p>Your Character:</p>
             <select id="gw-character-name">
-                <option value="">Select A Character After Loading A Game</option>
+                <option selected disabled>Select A Character After Loading A Game</option>
             </select>
             <img id="select-image" src="">
         </div>
@@ -36,7 +36,7 @@
             <p>Your Board:</p>
     
             <select id="gw-game-select">
-                <option value="">Please Select A Game or Difficulty</option>
+                <option selected disabled>--Please Select A Game or Mode--</option>
                 <option value="all">All Games</option>
                 <option value="1">Shadow Dragon and New Mystery</option>
                 <option value="2">Shadows of Valentia</option>
@@ -50,8 +50,13 @@
                 <option value="11">Fates</option>
                 <option value="12">Three Houses and Three Hopes</option>
                 <option value="13">Engage</option>
+                <option value="14">Tokyo Mirage Sessions #FE</option>
                 <option value="15">Heroes</option>
+                <option disabled></option>
+                <option disabled>--Special Modes--</option>
                 <option value="anna">Hard Mode</option>
+                <option value="dev-fav">Dev's Favourites Mode</option>
+                <option value="beta-fav">Beta Tester's Favourites Mode</option>
             </select>
             <button id="gw-generate">Generate</button>
     

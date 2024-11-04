@@ -88,6 +88,8 @@ function selectList() {
     const defaultVar = document.createElement("option")
 
     defaultVar.textContent = "Please Select A Character"
+    defaultVar.selected = "true"
+    defaultVar.disabled = "true"
     yourName.appendChild(defaultVar)
 
     piece.forEach(piece => {
